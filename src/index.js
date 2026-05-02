@@ -12,6 +12,36 @@ const app = express()
 
 
 connectDB()
+.then(() => {
+   app.listen(process.env.PORT) ||8000,() => {
+    console.log(`app is listening on port ${process.env.PORT}`);
+   }
+})
+.catch((error) => {
+    console.log("Erroe connectiong to database",error );
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ------------------first method to connect database-------------------
 // ;(async() => {
 
